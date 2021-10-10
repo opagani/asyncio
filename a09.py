@@ -15,8 +15,10 @@ def threadish():
 
 
 async def main():
-    threadish()
     await hello()
-    threadish()
+    loop = asyncio.get_running_loop()
+
+    # pass the function, *without* calling it!
+    loop.run_in_executor(None, threadish)
 
 asyncio.run(main())
