@@ -19,6 +19,7 @@ async def main():
     loop = asyncio.get_running_loop()
 
     # pass the function, *without* calling it!
-    loop.run_in_executor(None, threadish)
+    result = loop.run_in_executor(None, threadish)
+    print(f'{result=}')
 
 asyncio.run(main())
