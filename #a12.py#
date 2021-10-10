@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 # instead of requests, we can use a few different options
-# one option: httpx, a new-ish library (tr
-# my option: aiohttp
+# one option: httpx, a new-ish library (tries to be compatible with requests)
+# my option: aiohttp (tries to 
 
 import asyncio
 import requests
