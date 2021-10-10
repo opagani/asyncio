@@ -15,7 +15,7 @@ async def greet(s, n):
 async def main():
     # set up / schedule the tasks -- what do you want to run?
     t1 = asyncio.create_task(greet('hello', 3), name='hello-task')
-    t2 = asyncio.create_task(greet('goodbye', 4), name='goodbye-task')
+    t2 = asyncio.create_task(greet('goodbye', 3), name='goodbye-task')
 
     # I want to say: let's wait for a bunch of them
     tasks = [t1, t2]
