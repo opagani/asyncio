@@ -30,7 +30,7 @@ async def main():
                     'https://postgresql.org']:
         t = asyncio.create_task(vowel_counts(one_url))
         tasks.append(t)
-        await asyncio.gather(*tasks)
+    await asyncio.gather(*tasks)
 
     end_time = time.perf_counter()
 
