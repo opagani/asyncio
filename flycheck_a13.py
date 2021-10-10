@@ -4,7 +4,7 @@ import asyncio
 import aiohttp
 from collections import defaultdict
 
-counts = {}
+counts = defaultdict(int)
 
 
 async def vowel_counts(one_url):
@@ -15,3 +15,5 @@ async def vowel_counts(one_url):
             for one_character in content:
                 if one_character.lower() in 'aeiou':
                     counts[one_url] += 1
+
+                    
