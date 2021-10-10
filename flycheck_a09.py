@@ -15,7 +15,7 @@ def threadish():
 
 
 async def main():
-    long_running_thread()
+    threadish()
     await hello()
     long_running_thread()
 
