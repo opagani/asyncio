@@ -28,7 +28,7 @@ async def main():
                     'https://python.org/',
                     'https://nytimes.com',
                     'https://postgresql.org']:
-        t = asyncio.make_task(vowel_counts(one_url))
+        t = asyncio.create_task(vowel_counts(one_url))
         tasks.append(t)
         await asyncio.gather(*tasks)
 
