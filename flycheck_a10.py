@@ -20,7 +20,6 @@ async def main():
                     'https://postgresql.org']:
         await get_one_site(one_url)
 
-    print(sites)
 
 
 asyncio.run(main())
