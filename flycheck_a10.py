@@ -8,6 +8,7 @@ sites = {}
 
 
 async def get_one_site(one_url):
+    prin
     result = requests.get(one_url)
     sites[one_url] = len(result.content())
 
@@ -21,5 +22,5 @@ async def main():
         await get_one_site(one_url)
 
 
-
 asyncio.run(main())
+print(sites)
