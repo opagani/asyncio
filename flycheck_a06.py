@@ -10,7 +10,7 @@ async def greet(s, n):
         for i in range(n):
             # cede control of the CPU with await in your function
             print(s)
-            await asyncio.sleep(03)   
+            await asyncio.sleep(3)  # wait for 3 seconds -- a long time!
         return f'Done with greet({s})'
     except asyncio.CancelledError as e:
         print(f'Canceled task {asyncio.current_task()}: {e}')
