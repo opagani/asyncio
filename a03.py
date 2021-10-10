@@ -11,8 +11,9 @@ async def greet(s, n):
 
 
 async def main():
-    await greet('hello', 3)
-    await greet('goodbye', 4)
+    t1 = asyncio.create_task(greet('hello', 3))
+    t2 = asyncio.create_task(greet('goodbye', 4))
+
 
 # how do we run it? We put it on the event loop
 # I don't put main, the function, on the event loop
