@@ -23,7 +23,7 @@ async def factorial(n):
 
 async def main():
     t1 = asyncio.create_task(sumto(5))
-    t2 = asyncio.create_task(factorial(15))
+    t2 = asyncio.create_task(factorial())
 
     results = await asyncio.gather(t1, t2)
     print(results)
