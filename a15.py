@@ -20,7 +20,7 @@ async def handle_client(reader, writer):
             print('\tEnding connection')
             break
 
-        response = 'Hello from the server!'
+        response = 'Hello from the server!\n'
         writer.write(response.encode('utf8'))
 
         # send a response to the writer socket
