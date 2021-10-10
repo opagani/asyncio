@@ -24,7 +24,7 @@ async def main():
                     'https://nytimes.com',
                     'https://postgresql.org']:
 
-        await get_one_site(one_url)
+        await vowel_counts(one_url)
 
     end_time = time.perf_counter()
 
