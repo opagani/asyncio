@@ -28,6 +28,7 @@ async def main():
                     'https://python.org/',
                     'https://nytimes.com',
                     'https://postgresql.org']:
+        t = asyncio.make_task(vowel_counts(one_url))
 
         await vowel_counts(one_url)
 
