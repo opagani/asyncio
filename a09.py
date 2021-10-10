@@ -5,7 +5,7 @@ import asyncio
 
 async def hello():
     print('Hello from before sleeping!')
-    asyncio.sleep(1)
+    await asyncio.sleep(1)
     print('Hello from after sleeping!')
 
 
