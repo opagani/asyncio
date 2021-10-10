@@ -19,7 +19,7 @@ async def main():
 
     # wait for t1 and t2 to finish, then let main die
     # if I use this, then main will exit after t1 and t2 are both done
-    await 5
+    await t1
     await t2
 
     # alternatively, we can sleep for a certain amount of time
