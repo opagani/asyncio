@@ -28,4 +28,4 @@ async def main():
     results = await asyncio.gather(t1, t2)
     print(results)
 
-asyncio.run(main())
+loop = asyncio.get_event_loop()
