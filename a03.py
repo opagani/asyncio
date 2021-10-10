@@ -14,8 +14,8 @@ async def greet(s, n):
 
 async def main():
     # set up / schedule the tasks -- what do you want to run?
-    t1 = asyncio.create_task(greet('hello', 10, name='hello-task'))
-    t2 = asyncio.create_task(greet('goodbye', 3, name='goodbye-task'))
+    t1 = asyncio.create_task(greet('hello', 10), name='hello-task')
+    t2 = asyncio.create_task(greet('goodbye', 3), name='goodbye-task')
 
     # wait for t1 and t2 to finish, then let main die
     # if I use this, then main will exit after t1 and t2 are both done
