@@ -18,14 +18,7 @@ async def main():
     t1 = asyncio.create_task(greet('hello', 10), name='hello-task')
     t2 = asyncio.create_task(greet('goodbye', 3), name='goodbye-task')
 
-    # wait for t1 and t2 to finish, then let main die
-    # if I use this, then main will exit after t1 and t2 are both done
-    await t1
-    await t2
-
-    # alternatively, we can sleep for a certain amount of time
-    # if I use this, then main will exit after 5 seconds, hopefully enough for t1+t2 to do their thing
-    # asyncio.sleep(5)
+    # I want to say: let's wait for a bunch of them
 
 
 # how do we run it? We put it on the event loop
