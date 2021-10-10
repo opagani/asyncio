@@ -6,6 +6,7 @@ import requests
 
 sites = {}
 
+
 async def main():
     for one_url in ['https://lerner.co.il',
                     'https://python.org/',
@@ -14,4 +15,7 @@ async def main():
                     'https://postgresql.org']:
         result = requests.get(one_url)
         sites[one_url] = len(result.content())
-        
+
+    print(sites)
+
+    
