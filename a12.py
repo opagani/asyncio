@@ -14,8 +14,11 @@ sites = {}
 
 async def get_one_site(one_url):
     print(one_url)
-    result = aiohttp.get(one_url)
-    sites[one_url] = len(result.content)
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(one_url) as response:
+            content = await response.text()
+            sites[one_url] = len(content)
 
 
 async def main():
