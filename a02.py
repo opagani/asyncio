@@ -2,10 +2,12 @@
 
 import asyncio
 
-# simplest possible asyncio program
+# I'm going to write a second coroutine function
 
-# this is a coroutine *function*
-# calling it returns a coroutine *object*
+
+async def greet(s, n):
+    for i in range(n):
+        print(s)
 
 
 async def main():
