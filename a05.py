@@ -12,6 +12,8 @@ async def greet(s, n):
             print(s)
             await asyncio.sleep(0.1)   # go to sleep -- aka give up control
         return f'Done with greet({s})'
+    except asyncio.CancelledError as e:
+        print(f'Canceled task {asyncio.current_task()}')
 
 
 async def main():
