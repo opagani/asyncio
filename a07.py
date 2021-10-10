@@ -6,6 +6,7 @@ import asyncio
 async def sumto(n):
     total = 0
     for i in range(n+1):
+        print(f'sumto, {i=}')
         total += i
     return total
 
@@ -13,6 +14,7 @@ async def sumto(n):
 async def factorial(n):
     output = 1
     for i in range(1, n+1):
+        print(f'factorial, {i=}')
         output *= i
     return output
 
