@@ -3,7 +3,8 @@
 import asyncio
 
 
-asyncio def  handle_client(reader, writer):
+async def handle_client(reader, writer):
+
 
 
 async def main():
