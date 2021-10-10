@@ -4,8 +4,8 @@
 # one option: httpx, a new-ish library (tries to be compatible with requests)
 # my option: aiohttp (tries to be compatiable with the asyncio style of doing things)
 
+import asyncio
 import aiohttp
-import requests
 import time
 
 
