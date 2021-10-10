@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# instead of requests, we can use a few different options
+# one option: http
 
 import asyncio
 import requests
