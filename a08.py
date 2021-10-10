@@ -29,6 +29,8 @@ loop2 = asyncio.get_event_loop()
 loop3 = asyncio.get_event_loop()
 loop4 = asyncio.get_event_loop()
 
+print(loop is loop2 is loop3 is loop4)
+
 # create my tasks
 t1 = loop.create_task(sumto(5))
 t2 = loop.create_task(factorial(15))
