@@ -22,7 +22,7 @@ async def get_one_site(one_url):
         async with session.get(one_url) as response:
             content = await response.text()
             sites[one_url] = len(content)
-    print(f'\tFinished with {one_url}')
+    print(f'\tFinished with {one_url}; sites = {sites}')
 
 
 async def main():
