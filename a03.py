@@ -17,7 +17,7 @@ async def main():
     t1 = asyncio.create_task(greet('hello', 3))
     t2 = asyncio.create_task(greet('goodbye', 4))
 
-    # wait for the tasks to finish
+    # wait for t1 and t2 to finish, then let main die
     await t1
     await t2
 
