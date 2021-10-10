@@ -11,8 +11,8 @@ async def greet(s, n):
 
 
 async def main():
-    greet('hello', 3)
-    greet('goodbye', 4)
+    await greet('hello', 3)
+    await greet('goodbye', 4)
 
 # how do we run it? We put it on the event loop
 # I don't put main, the function, on the event loop
