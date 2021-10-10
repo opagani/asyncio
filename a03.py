@@ -18,10 +18,9 @@ async def main():
     t2 = asyncio.create_task(greet('goodbye', 4))
 
     # wait for the tasks to finish
-    # await t1
-    # await t2
+    await t1
+    await t2
 
-    await asyncio.sleep(5)
 
 # how do we run it? We put it on the event loop
 # I don't put main, the function, on the event loop
