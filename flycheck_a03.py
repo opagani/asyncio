@@ -20,7 +20,9 @@ async def main():
     # wait for t1 and t2 to finish, then let main die
     await t1
     await t2
-    
+
+    # alternatively, we can sleep for a certain amount of time
+    asyncio.sl
 
 
 # how do we run it? We put it on the event loop
