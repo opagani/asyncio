@@ -16,11 +16,10 @@ async def handle_client(reader, writer):
     # if it's an empty string, then end the connection
     if not s.strip():
         print('\tEnding connection')
-        ret
+        return
 
-    
-    
-
+    response = 'Hello from the server!'
+    writer
     # send a response to the writer socket
     # close the writer and be done
 
