@@ -7,7 +7,7 @@ import asyncio
 
 async def greet(s, n):
     for i in range(n):
-        asyncio.sleep(0.1)   # go to sleep -- aka give up control
+        await asyncio.sleep(0.1)   # go to sleep -- aka give up control
         print(s)
 
 
