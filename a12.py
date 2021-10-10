@@ -36,6 +36,8 @@ async def main():
                     'https://postgresql.org']:
         t = asyncio.create_task(get_one_site(one_url))
         tasks.append(t)
+
+    # wait for all of the tasks in the "tasks" list to finish
     await asyncio.gather(*tasks)
     end_time = time.perf_counter()
 
