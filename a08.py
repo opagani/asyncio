@@ -30,6 +30,6 @@ loop = asyncio.get_event_loop()
 t1 = loop.create_task(sumto(5))
 t2 = loop.create_task(factorial(15))
 
-tasks = asyncio.all_tasks(loop=loop)
-group = asyncio.gather(*tasks)
+# get a future describing all of the tasks
+group = asyncio.gather(t1, t2)
 loop.run_until_complete(group)
