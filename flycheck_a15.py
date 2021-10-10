@@ -6,7 +6,10 @@ import asyncio
 async def handle_client(reader, writer):
     # the coroutine is run when we get a new connection
     # read data from the client (i.e., read from my "reader" socket)
-    # de
+    # decide what to do with the data I got
+    # send a response to the writer socket
+    # close the writer and be done
+
 
 async def main():
     # what coroutine do we want to use in a task when someone connects to us?
