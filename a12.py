@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 # instead of requests, we can use a few different options
-# one option: httpx, a new-ish library
-# my option: aiohttp
+# one option: httpx, a new-ish library (tries to be compatible with requests)
+# my option: aiohttp (tries to be compatiable with the asyncio style of doing things)
 
-import asyncio
+import aiohttp
 import requests
 import time
 
@@ -14,7 +14,7 @@ sites = {}
 
 async def get_one_site(one_url):
     print(one_url)
-    result = requests.get(one_url)
+    result = aiohttp.get(one_url)
     sites[one_url] = len(result.content)
 
 
