@@ -10,6 +10,7 @@ async def handle_client(reader, writer):
     # read data from the client (i.e., read from my "reader" socket)
     s = (await reader.read(255)).decode('utf8')
     
+    print(f's = {s}')
 
 
     # decide what to do with the data I got
