@@ -19,7 +19,9 @@ async def main():
     t2 = asyncio.create_task(greet('goodbye', 3), name='goodbye-task')
 
     # I want to say: let's wait for a bunch of them
-
+    tasks = [t1, t2]
+    results = asyncio.gather(*tasks)
+    print(results)
 
 # how do we run it? We put it on the event loop
 # I don't put main, the function, on the event loop
