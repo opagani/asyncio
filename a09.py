@@ -11,3 +11,5 @@ async def hello():
 
 async def main():
     await hello()
+
+asyncio.run(main())
