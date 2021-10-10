@@ -21,6 +21,8 @@ async def factorial(n):
     return output
 
 
+# get the event loop
+# you can call this method 
 loop = asyncio.get_event_loop()
 
 t1 = loop.create_task(sumto(5))
