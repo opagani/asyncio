@@ -9,6 +9,7 @@ counts = defaultdict(int)
 
 
 async def vowel_counts(one_url):
+    print(one_url)
     async with aiohttp.ClientSession() as session:
         async with session.get(one_url) as response:
             content = await response.text()
@@ -32,4 +33,5 @@ async def main():
     print(f'Total time = {end_time - start_time}')
 
 
-asyncio    
+asyncio.run(main())
+print(counts)
