@@ -20,6 +20,10 @@ async def main():
     # I want to say: let's wait for a bunch of them
     tasks = [t1, t2]            # create a list of tasks
     results = await asyncio.gather(*tasks)  # create a new future with these two tasks
+
+    # the above line is the same as saying
+    results = await asyncio.gather(t1, t2)
+
     print(results)
 
 # how do we run it? We put it on the event loop
