@@ -22,7 +22,8 @@ async def main():
     t2 = asyncio.create_task(greet('goodbye', 4), name='goodbye-task')
 
     tasks = asyncio.gather(t1, t2)
-    await ta
+    
+    await asyncio.wait_for(tasks, 4)
 
 
     print(results)
