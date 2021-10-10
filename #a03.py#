@@ -22,7 +22,7 @@ async def main():
     await t2
 
     # alternatively, we can sleep for a certain amount of time
-    # if I use this, then main will exit after 5 seconds, hopefully enough for t1+t2 to do their thing
+    # if I use this, then
     asyncio.sleep(5)  
 
 
