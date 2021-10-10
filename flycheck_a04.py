@@ -26,7 +26,7 @@ async def main():
     # the above line is the same as saying
     # results = await asyncio.gather(t1, t2)
 
-    # print(results)
+    print(results)
 
 # how do we run it? We put it on the event loop
 # I don't put main, the function, on the event loop
