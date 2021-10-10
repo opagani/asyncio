@@ -26,8 +26,6 @@ async def factorial(n):
 # the loop is a singleton -- you'll get the same one
 loop = asyncio.get_event_loop()
 
+# create my tasks
 t1 = loop.create_task(sumto(5))
 t2 = loop.create_task(factorial(15))
-
-results = await asyncio.gather(t1, t2)
-print(results)
