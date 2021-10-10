@@ -22,11 +22,10 @@ async def main():
     t2 = asyncio.create_task(greet('goodbye', 4), name='goodbye-task')
 
     tasks = asyncio.gather(t1, t2)
-    
-    # wait only 4 seconds for tasks t1 and t2 to finish
-    # if they don't finish in that time, then we'll get an asyncio.TimeO
-    await asyncio.wait_for(tasks, 4)
 
+    # wait only 4 seconds for tasks t1 and t2 to finish
+    # if they don't finish in that time, then we'll get an asyncio.TimeoutError exception
+    results = await asyncio.wait_for(tasks, 4)
 
     print(results)
 
