@@ -17,6 +17,8 @@ async def vowel_counts(one_url):
                 if one_character.lower() in 'aeiou':
                     counts[one_url] += 1
 
+    print(f'\tDone with {one_url}')
+
 
 async def main():
     start_time = time.perf_counter()
