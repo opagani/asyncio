@@ -15,6 +15,8 @@ def long_running_thread():
 
 
 async def main():
+    long_running_thread()
     await hello()
+    long_running_thread()
 
 asyncio.run(main())
