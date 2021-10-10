@@ -2,7 +2,7 @@
 
 import asyncio
 import requests
-
+import time
 
 
 sites = {}
@@ -15,6 +15,7 @@ async def get_one_site(one_url):
 
 
 async def main():
+    start_time = time.perf_counter()
     for one_url in ['https://lerner.co.il',
                     'https://python.org/',
                     'https://nytimes.com',
