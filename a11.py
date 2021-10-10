@@ -17,12 +17,16 @@ async def get_one_site(one_url):
 async def main():
     start_time = time.perf_counter()
 
+    tasks = []
     for one_url in ['https://lerner.co.il',
                     'https://python.org/',
                     'https://nytimes.com',
                     'https://washingtonpost.com',
                     'https://postgresql.org']:
-        await get_one_site(one_url)
+        t = asyncio.create_task(get_one_site(one_url))
+        tasks.append(t)
+    results = asyncio.gather(*tasks)
+
     end_time = time.perf_counter()
 
     print(f'Total time = {end_time - start_time}')
