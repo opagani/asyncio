@@ -13,7 +13,7 @@ sites = {}
 
 
 async def get_one_site(one_url):
-    print(f'Getting {one_url} in task {asyncio.current_task()}')
+    print(f'Getting {one_url}')
 
     async with aiohttp.ClientSession() as session:   # session = aiohttp.ClientSession()
         # session.__aenter__  -- asyncio enter
