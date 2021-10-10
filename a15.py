@@ -7,4 +7,6 @@ async def main():
     # what coroutine do we want to use in a task when someone connects to us?
     server = await asyncio.start_server(handle_client, 'localhost', 6789)
     async with server:
-        wait server.serve_forever()
+        await server.serve_forever()
+
+asyncio.run(main())
