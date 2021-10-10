@@ -8,8 +8,8 @@ import asyncio
 async def greet(s, n):
     for i in range(n):
         # cede control of the CPU with await in your function
-        await asyncio.sleep(0.1)   # go to sleep -- aka give up control
         print(s)
+        await asyncio.sleep(0.1)   # go to sleep -- aka give up control
 
 
 async def main():
