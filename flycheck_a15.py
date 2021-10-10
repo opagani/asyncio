@@ -5,7 +5,9 @@ import asyncio
 
 def plsentence(s):
     output = []
-    
+    for one_word in s.split():
+        if one_word[0] in 'aeiou':
+            
 
 async def handle_client(reader, writer):
     print(f'Task {asyncio.current_task()}, reader ID {id(reader)}')
