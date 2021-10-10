@@ -23,4 +23,4 @@ async def main():
     print(sites)
 
 
-    
+asyncio.run(main())

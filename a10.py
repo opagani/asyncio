@@ -21,3 +21,6 @@ async def main():
         await get_one_site(one_url)
 
     print(sites)
+
+
+asyncio.run(main())
