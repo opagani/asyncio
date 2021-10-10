@@ -32,4 +32,6 @@ t2 = loop.create_task(factorial(15))
 
 # get a future describing all of the tasks
 group = asyncio.gather(t1, t2)
+
+# run until we are done with the group
 loop.run_until_complete(group)
