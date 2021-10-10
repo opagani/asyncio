@@ -6,23 +6,25 @@ import asyncio
 async def handle_client(reader, writer):
     print(f'Task {asyncio.current_task()}, reader ID {id(reader)}')
 
-    # the coroutine is run when we get a new connection
-    # read data from the client (i.e., read from my "reader" socket)
-    s = (await reader.read(255)).decode('utf8')
+    while True:
 
-    print(f's = {s}')
+        # the coroutine is run when we get a new connection
+        # read data from the client (i.e., read from my "reader" socket)
+        s = (await reader.read(255)).decode('utf8')
 
-    # decide what to do with the data I got
-    # if it's an empty string, then end the connection
-    if not s.strip():
-        print('\tEnding connection')
-        return
+        print(f's = {s}')
 
-    response = 'Hello from the server!'
-    writer.write(response.encode('utf8'))
+        # decide what to do with the data I got
+        # if it's an empty string, then end the connection
+        if not s.strip():
+            print('\tEnding connection')
+            break
 
-    # send a response to the writer socket
-    await writer.drain()
+        response = 'Hello from the server!'
+        writer.write(response.encode('utf8'))
+
+        # send a response to the writer socket
+        await writer.drain()
 
     # close the writer and be done
     writer.close()
