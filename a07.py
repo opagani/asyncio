@@ -12,7 +12,7 @@ async def sumto(n):
 
 async def factorial(n):
     output = 1
-    for i in range(1, n):
+    for i in range(1, n+1):
         output *= i
     return output
 
