@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 import asyncio
-impor
+import requests
+
+
+sites = {}
+
 
 async def main():
     for one_url in ['https://lerner.co.il',
@@ -9,4 +13,5 @@ async def main():
                     'https://nytimes.com',
                     'https://washingtonpost.com',
                     'https://postgresql.org']:
-        
+        result = requests.get(one_url)
+        sites[one_url] = len(result.content())
