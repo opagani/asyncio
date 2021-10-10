@@ -9,6 +9,11 @@ async def hello():
     print('Hello from after sleeping!')
 
 
+def long_running_thread():
+    print('Hello from the long-running thread!')
+    return 12345
+
+
 async def main():
     await hello()
 
