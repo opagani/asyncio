@@ -3,6 +3,16 @@
 import asyncio
 
 
+def plsentence(s):
+    output = []
+    for one_word in s.split():
+        if one_word[0] in 'aeiou':
+            output.append(one_word + 'way')
+        else:
+            output.append(one_word[1:] + one_word[0] + 'ay')
+    return ' '.join(output)
+
+
 async def handle_client(reader, writer):
     print(f'Task {asyncio.current_task()}, reader ID {id(reader)}')
 
