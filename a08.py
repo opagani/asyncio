@@ -29,3 +29,7 @@ loop = asyncio.get_event_loop()
 # create my tasks
 t1 = loop.create_task(sumto(5))
 t2 = loop.create_task(factorial(15))
+
+tasks = asyncio.all_tasks(loop=loop)
+group = asyncio.gather(*tasks)
+loop.run_until_complete(group)
