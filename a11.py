@@ -10,7 +10,7 @@ sites = {}
 
 async def get_one_site(one_url):
     print(one_url)
-    result = requests.get(one_url)
+    result = await requests.get(one_url)
     sites[one_url] = len(result.content)
 
 
