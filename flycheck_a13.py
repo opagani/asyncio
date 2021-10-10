@@ -19,11 +19,12 @@ async def vowel_counts(one_url):
 async def main:
     start_time = time.perf_counter()
 
-    tasks = []
     for one_url in ['https://lerner.co.il',
                     'https://python.org/',
                     'https://nytimes.com',
                     'https://postgresql.org']:
+        
+
         t = asyncio.create_task(get_one_site(one_url))
         tasks.append(t)
 
