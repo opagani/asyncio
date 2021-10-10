@@ -20,6 +20,7 @@ async def main():
     # wait for t1 and t2 to finish, then let main die
     # if I use this, then main will exit after t1 and t2 are both done
     values = await t1, t2
+    print(values)
 
     # alternatively, we can sleep for a certain amount of time
     # if I use this, then main will exit after 5 seconds, hopefully enough for t1+t2 to do their thing
