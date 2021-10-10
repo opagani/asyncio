@@ -7,6 +7,7 @@ import asyncio
 
 async def greet(s, n):
     for i in range(n):
+        # 
         await asyncio.sleep(0.1)   # go to sleep -- aka give up control
         print(s)
 
@@ -16,6 +17,7 @@ async def main():
     t1 = asyncio.create_task(greet('hello', 3))
     t2 = asyncio.create_task(greet('goodbye', 4))
 
+    # wait for the tasks to finish
     await t1
     await t2
 
