@@ -4,7 +4,8 @@ import asyncio
 
 # simplest possible asyncio program
 
-# this is a coroutine!
+# this is a coroutine *function*
+# calling it returns a coroutine *object*
 
 
 async def main():
