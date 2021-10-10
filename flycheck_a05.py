@@ -6,11 +6,13 @@ import asyncio
 
 
 async def greet(s, n):
-    for i in range(n):
-        # cede control of the CPU with await in your function
-        print(s)
-        await asyncio.sleep(0.1)   # go to sleep -- aka give up control
-    return f'Done with greet({s})'
+    try:
+        for i in range(n):
+            # cede control of the CPU with await in your function
+            print(s)
+            await asyncio.sleep(0.1)   # go to sleep -- aka give up control
+        return f'Done with greet({s})'
+    except asyncio.create_task
 
 
 async def main():
