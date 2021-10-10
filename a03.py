@@ -10,6 +10,7 @@ async def greet(s, n):
         # cede control of the CPU with await in your function
         print(s)
         await asyncio.sleep(0.1)   # go to sleep -- aka give up control
+    print(f'Ended {asyncio.current_task()}')
 
 
 async def main():
