@@ -31,3 +31,4 @@ t1 = loop.create_task(sumto(5))
 t2 = loop.create_task(factorial(15))
 
 tasks = asyncio.all_tasks(loop=loop)
+group = asyncio.gather(*tasks)
