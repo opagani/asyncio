@@ -20,9 +20,11 @@ async def handle_client(reader, writer):
 
     response = 'Hello from the server!'
     writer.write(response.encode('utf8'))
-    await writer.dr
+    await writer.drain()
+    
     # send a response to the writer socket
     # close the writer and be done
+    writer.close()
 
 
 async def main():
