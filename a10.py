@@ -18,5 +18,6 @@ async def main():
                     'https://nytimes.com',
                     'https://washingtonpost.com',
                     'https://postgresql.org']:
+        await get_one_site(one_url)
 
     print(sites)
