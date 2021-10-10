@@ -22,6 +22,7 @@ async def get_one_site(one_url):
         async with session.get(one_url) as response:
             content = await response.text()
             sites[one_url] = len(content)
+    print(f'Getting {one_url} in task {asyncio.current_task()}')
 
 
 async def main():
