@@ -13,7 +13,7 @@ async def greet(s, n):
 
 
 async def main():
-    # set up the tasks -- what do you want to run?
+    # set up / schedule the tasks -- what do you want to run?
     t1 = asyncio.create_task(greet('hello', 3))
     t2 = asyncio.create_task(greet('goodbye', 4))
 
