@@ -24,7 +24,7 @@ async def factorial(n):
 # get the event loop
 # you can call this method however many times you want
 # the loop is a singleton -- you'll get the same one
-loop = asyncio.get_running_loop()
+loop = asyncio.get_event_loop()
 
 t1 = loop.create_task(sumto(5))
 t2 = loop.create_task(factorial(15))
