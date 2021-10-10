@@ -10,6 +10,7 @@ async def greet(s, n):
         # cede control of the CPU with await in your function
         print(s)
         await asyncio.sleep(0.1)   # go to sleep -- aka give up control
+    return f'Done with greet({s})'
 
 
 async def main():
@@ -18,8 +19,13 @@ async def main():
     t2 = asyncio.create_task(greet('goodbye', 4), name='goodbye-task')
 
     # I want to say: let's wait for a bunch of them
-    tasks = [t1, t2]
+    tasks = [t1, t2]            # create a list of tasks
+    # create a new future with these two tasks
     results = await asyncio.gather(*tasks)
+
+    # the above line is the same as saying
+    results = await asyncio.gather(t1, t2)
+
     print(results)
 
 # how do we run it? We put it on the event loop
